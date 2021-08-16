@@ -1,0 +1,646 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@font-face {
+  font-family: GothamBold;
+  src: url("../fonts/Gotham-Bold.otf");
+}
+@font-face {
+  font-family: GothamBook;
+  src: url("../fonts/Gotham-Book.otf");
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url("../fonts/Gotham-Medium.otf");
+}
+a {
+  text-decoration: none;
+  font-family: GothamBook;
+}
+
+h1 {
+  font-family: GothamBold;
+  font-size: 64px;
+  letter-spacing: 0.2rem;
+  line-height: 64px;
+}
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+}
+
+p {
+  font-family: GothamBook;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  color: #d9d9d9;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.scrolling {
+  background-color: black;
+  z-index: 9;
+  transition: 0.6s ease-in-out;
+}
+
+:root {
+  --swiper-theme-color: white;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  transition: 0.6s ease-in-out;
+  width: 101%;
+  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  padding: 3rem 0;
+}
+@media screen and (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+}
+.nav .nav-sx,
+.nav .nav-dx {
+  display: flex;
+  font-family: GothamBook;
+  width: 50%;
+}
+.nav .nav-sx {
+  padding-left: 206px;
+}
+.nav .nav-dx {
+  padding-right: 206px;
+  justify-content: space-between;
+}
+.nav .nav-dx a {
+  color: #d9d9d9;
+  font-size: 16px;
+}
+
+.mobile-nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+.mobile-nav a {
+  color: black;
+}
+.mobile-nav i {
+  margin-right: 40px;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: height 0.5s ease-in;
+}
+.modal a {
+  margin: 2rem;
+  padding: 2rem;
+  color: black;
+  opacity: 100%;
+  transition: opacity 1s;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+header .header-title {
+  width: 14rem;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -50%);
+  color: white;
+  z-index: 5;
+  text-align: left;
+}
+
+section.cards {
+  background-color: #d9d9d9;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    flex-direction: column;
+  }
+}
+
+.card {
+  width: calc(33% - 20px - 20px);
+  background-color: white;
+}
+.card .play-harder {
+  height: 100px;
+  background-image: url("../img/card-play-harder.png");
+  background-size: auto;
+  background-position: center;
+}
+.card .simplicity {
+  height: 100px;
+  background-image: url("../img/card-simplicity.png");
+  background-size: auto;
+  background-position: left;
+}
+.card .innovation {
+  height: 100px;
+  background-image: url("../img/card-innovation.png");
+  background-size: auto;
+  background-position: left;
+}
+.card .card-description {
+  padding: 3rem 1rem;
+}
+.card .card-description p {
+  color: black;
+  font-size: 16px;
+}
+.card .card-cta {
+  background-color: black;
+  color: white;
+  padding: 1rem 0;
+  font-family: GothamBook;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+}
+.card :nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 900px) {
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+section.we-are,
+section.we-do,
+section.careers {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  section.we-are,
+section.we-do,
+section.careers {
+    flex-direction: column;
+  }
+}
+section.we-are .img-wrapper,
+section.we-do .img-wrapper,
+section.careers .img-wrapper {
+  width: 60%;
+  height: 580px;
+  object-fit: cover;
+  object-position: top left;
+}
+section.we-are .img-wrapper img,
+section.we-do .img-wrapper img,
+section.careers .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+@media screen and (max-width: 900px) {
+  section.we-are .img-wrapper,
+section.we-do .img-wrapper,
+section.careers .img-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+}
+section.we-are .text-wrapper,
+section.we-do .text-wrapper,
+section.careers .text-wrapper {
+  width: 40%;
+  background-color: black;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.we-are .text-wrapper h1,
+section.we-do .text-wrapper h1,
+section.careers .text-wrapper h1 {
+  color: white;
+  width: 120px;
+  margin: 0;
+}
+section.we-are .text-wrapper p,
+section.we-do .text-wrapper p,
+section.careers .text-wrapper p {
+  width: 250px;
+  margin: 0;
+  margin-top: 20px;
+  text-align: right;
+}
+section.we-are .text-wrapper button,
+section.we-do .text-wrapper button,
+section.careers .text-wrapper button {
+  background-color: transparent;
+  border: 1px solid #d9d9d9;
+  padding: 1rem;
+  font-size: 12px;
+  margin-top: 20px;
+}
+section.we-are .text-wrapper button a,
+section.we-do .text-wrapper button a,
+section.careers .text-wrapper button a {
+  color: #d9d9d9;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  section.we-are .text-wrapper,
+section.careers .text-wrapper {
+    width: 100%;
+    padding: 4rem 4rem;
+  }
+}
+section.we-are .text-wrapper p,
+section.careers .text-wrapper p {
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  section.we-do {
+    flex-direction: column-reverse;
+  }
+}
+section.we-do .img-wrapper img {
+  object-position: right;
+}
+section.we-do .text-wrapper {
+  padding-left: 0;
+  padding-right: 80px;
+  align-items: flex-end;
+  background-color: white;
+}
+@media screen and (max-width: 900px) {
+  section.we-do .text-wrapper {
+    align-items: flex-start;
+    width: 100%;
+    padding: 4rem 4rem;
+  }
+}
+section.we-do .text-wrapper h1,
+section.we-do .text-wrapper p {
+  color: black;
+}
+@media screen and (max-width: 900px) {
+  section.we-do .text-wrapper h1,
+section.we-do .text-wrapper p {
+    text-align: left;
+  }
+}
+section.we-do .text-wrapper button {
+  border-color: black;
+}
+section.we-do .text-wrapper button a {
+  color: black;
+}
+
+.accordion {
+  font-family: GothamBook;
+  padding: 4rem 0;
+  background-color: #d9d9d9;
+}
+.accordion .container {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .accordion .container {
+    flex-direction: column;
+  }
+}
+.accordion .accordion-select {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .accordion .accordion-select {
+    width: 100%;
+  }
+}
+.accordion .accordion-button-1,
+.accordion .accordion-button-2,
+.accordion .accordion-button-3 {
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: #ccc;
+  padding: 1rem 4rem 1rem 4rem;
+  color: black;
+}
+.accordion .accordion-button-1 i,
+.accordion .accordion-button-2 i,
+.accordion .accordion-button-3 i {
+  transition: transform 0.5s;
+}
+@media screen and (max-width: 900px) {
+  .accordion .accordion-button-1,
+.accordion .accordion-button-2,
+.accordion .accordion-button-3 {
+    padding: 1rem 3rem;
+  }
+}
+.accordion .accordion-button-1.active,
+.accordion .accordion-button-2.active,
+.accordion .accordion-button-3.active {
+  background-color: black;
+  color: white;
+}
+.accordion .accordion-button-1.active i,
+.accordion .accordion-button-2.active i,
+.accordion .accordion-button-3.active i {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+.accordion .accordion-text {
+  background-color: white;
+  width: 60%;
+  padding: 2rem 6rem 8rem 6rem;
+}
+.accordion .accordion-text p {
+  color: black;
+}
+@media screen and (max-width: 900px) {
+  .accordion .accordion-text p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .accordion .accordion-text {
+    width: 91%;
+    padding: 1rem 1rem;
+  }
+}
+
+.contact-us {
+  padding: 4rem 0;
+  background-color: black;
+}
+.contact-us .container {
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.contact-us .container h1 {
+  letter-spacing: unset;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .contact-us .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact-us a {
+  background: white;
+  padding: 1rem 4rem;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: GothamMedium;
+}
+@media screen and (max-width: 900px) {
+  .contact-us .left {
+    margin-bottom: 40px;
+  }
+}
+.contact-us .left h1 {
+  margin-top: 0;
+  width: 200px;
+}
+.contact-us .left p {
+  margin: 0;
+}
+.contact-us .form {
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .contact-us .form {
+    width: 80%;
+  }
+}
+.contact-us .form form div {
+  display: flex;
+  width: 100%;
+}
+.contact-us .form input,
+.contact-us .form textarea {
+  width: 97%;
+  background-color: transparent;
+  color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  padding: 0.5rem;
+  font-family: GothamBook;
+  margin-top: 10px;
+}
+.contact-us .form input:focus,
+.contact-us .form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+.contact-us .form input:first-child, .contact-us .form input:nth-child(2) {
+  width: 50%;
+}
+.contact-us .form input:nth-child(2) {
+  margin-left: 10px;
+}
+.contact-us .form input#email {
+  width: 97%;
+  margin-left: 0;
+}
+.contact-us .form .send-button {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+footer {
+  border-top: 1px solid #d9d9d9;
+  padding: 4rem 0;
+  background-color: black;
+  color: #d9d9d9;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .container .social,
+footer .container .footer-nav {
+  margin-top: 40px;
+}
+footer .container .footer-nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  footer .container .footer-nav {
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+  }
+}
+footer .container .social {
+  color: gray;
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  footer .container .social {
+    width: 20%;
+  }
+}
+footer .container a {
+  color: #d9d9d9;
+}
+
+.overlay-animation {
+  height: 0vh;
+}
+.overlay-animation a {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+.accordion-text {
+  position: relative;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 29px;
+  height: 29px;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

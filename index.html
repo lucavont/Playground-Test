@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="root">
+        <!-- NAVBAR -->
+        <nav class="" id="navbar">
+            <div class="nav">
+                <div class="nav-sx">
+                    <div class="img-wrapper">
+                        <img src="./img/logo-playground-white.png" alt="Playground Logo">
+                    </div>
+                </div>
+                <div class="nav-dx">
+                    <a href="#">we are</a>
+                    <a href="#">we do</a>
+                    <a href="#">careers</a>
+                    <a href="#">contact us</a>
+                </div>
+            </div>
+        </nav>
+        <div class="mobile-nav">
+            <a href="#" id="panel-opener"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="modal overlay-animation">
+            <a href="#" class="modal-link">we are</a>
+            <a href="#" class="modal-link">we do</a>
+            <a href="#" class="modal-link">careers</a>
+            <a href="#" class="modal-link">contact us</a>
+        </div>
+
+
+        <!-- HEADER SLIDER -->
+        <header>
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/slide-hello.jpg" alt="Hello Image">
+                        <div class="header-title">
+                            <h1>lorem ipsum.</h1>
+                            <p>Consectetur adipiscing elit.</br>Nulla condimentum tortor sem,</br>in semper nisl
+                                bibendum eu.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/slide-play.jpg" alt="Play Image"></div>
+                    <div class="swiper-slide"><img src="./img/slide-circle.jpg" alt="Circle Image"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </header>
+
+
+        <!-- CARDS -->
+        <section class="cards">
+            <div class="container">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <div class="play-harder"></div>
+                        <div class="card-description text-center">
+                            <p>Aenean mollis dolor a mattis viverra. in hac habitasse
+                                platea dictumst. Curabitur tempus dui tortor, et bibendum lacus eleifend ut.</p>
+                        </div>
+                        <a href="#">
+                            <div class="card-cta text-center">read more</div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="simplicity"></div>
+                        <div class="card-description text-center">
+                            <p>Aenean mollis dolor a mattis viverra. in hac habitasse
+                                platea dictumst. Curabitur tempus dui tortor, et bibendum lacus eleifend ut.</p>
+                        </div>
+                        <a href="#">
+                            <div class="card-cta text-center">read more</div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="innovation"></div>
+                        <div class="card-description text-center">
+                            <p>Aenean mollis dolor a mattis viverra. in hac habitasse
+                                platea dictumst. Curabitur tempus dui tortor, et bibendum lacus eleifend ut.</p>
+                        </div>
+                        <a href="#">
+                            <div class="card-cta text-center">read more</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WE ARE BANNER -->
+        <section class="we-are">
+            <div class="left img-wrapper">
+                <img src="./img/banner-we-are.jpg" alt="Office Image">
+            </div>
+            <div class="right text-wrapper">
+                <h1>We are.</h1>
+                <p>Consectetur adipiscing elit. Nulla codimentum tortor sem.</p>
+                <button><a href="#">the players <i class="fas fa-chevron-right"></i></a></button>
+            </div>
+        </section>
+
+        <!-- WE DO BANNER -->
+        <section class="we-do">
+            <div class="right text-wrapper">
+                <h1>We do.</h1>
+                <p>Consectetur adipiscing elit. Nulla codimentum tortor sem.</p>
+                <button><a href="#">the projects <i class="fas fa-chevron-right"></i></a></button>
+            </div>
+
+            <div class="left img-wrapper">
+                <img src="./img/banner-we-do.jpg" alt="Vans Signal">
+            </div>
+        </section>
+
+        <!-- CAREERS BANNER -->
+        <section class="careers">
+            <div class="left img-wrapper">
+                <img src="./img/banner-carrers.jpg" alt="Office Image">
+            </div>
+            <div class="right text-wrapper">
+                <h1>careers</h1>
+                <p>Consectetur adipiscing elit. Nulla codimentum tortor sem.</p>
+                <button><a href="#">the positions <i class="fas fa-chevron-right"></i></a></button>
+            </div>
+        </section>
+
+        <!-- ACCORDION -->
+        <section class="accordion">
+            <div class="container">
+                <div class="accordion-select">
+                    <div id="button1" class="accordion-button-1 active">Vestibulum at odio sit amet <i
+                            class="fas fa-chevron-up"></i>
+                    </div>
+                    <div id="button2" class="accordion-button-2">Sed vehicula neque <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div id="button3" class="accordion-button-3">Nulla id libero pretium <i
+                            class="fas fa-chevron-up"></i></div>
+                </div>
+                <div class="accordion-text">
+                    <p id="accordion-text-p"></p>
+                    <div id="loader" class="hidden"><img src="./img/loader.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US -->
+        <section class="contact-us">
+            <div class="container">
+                <div class="left">
+                    <h1>contact us.</h1>
+                    <p>Playground srl</p>
+                    <p>Via G. Mazzini 3/C,</p>
+                    <p>Cernusco Sul Naviglio (Milano)</p>
+                    <p>-</p>
+                    <p>T +39 0240706003</p>
+                </div>
+                <div class="form">
+                    <form>
+                        <div>
+                            <input type="text" id="fname" name="fname" placeholder="name">
+                            <input type="text" id="lname" name="lname" placeholder="last name">
+                        </div>
+                        <input type="text" id="email" name="email" placeholder="email">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+                    </form>
+                    <div class="send-button">
+                        <a href="#">send <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <img src="./img/logo-playground-white.png" alt="Playground Logo">
+                <div class="footer-nav">
+                    <a href="#">we are</a>
+                    <a href="#">we do</a>
+                    <a href="#">careers</a>
+                    <a href="#">contact us</a>
+                </div>
+                <div class="social">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script src="./js/vuescript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/home-swiper.js"></script>
+    <script src="./js/navbar-scroll.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/ajax-call.js"></script>
+</body>
+
+</html>
